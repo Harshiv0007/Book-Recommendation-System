@@ -1,0 +1,153 @@
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>-->
+
+<!--		&lt;!&ndash; Font Awesome Icon &ndash;&gt;-->
+<!--		<link rel="stylesheet" href="css/font-awesome.min.css">-->
+
+<!--		&lt;!&ndash; Custom stlylesheet &ndash;&gt;-->
+<!--		<link type="text/css" rel="stylesheet" href="css/s.css"/>-->
+<!--	<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">-->
+
+<!--	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<!--</head>-->
+<!--<style>-->
+<!--    .text-white{-->
+<!--        color:white-->
+<!--    }-->
+<!--    th{-->
+<!--    text-align:center;-->
+
+<!--    }-->
+<!--</style>-->
+
+<!--<body style="background-image:url('https://dg0lpj0xiisq5.cloudfront.net/assets/v1/authentication/background_books-cea9d1aee2ddd22a50736e54d6689f53a72589b55b8aa326ac3a32cada24535e.jpg');" >-->
+<!--        &lt;!&ndash; Home &ndash;&gt;-->
+<!--		<nav class="navbar text-white sticky" style="background-color:#A020F0;height:30px;">-->
+<!--        <a class="navbar-brand" style="color:white;">Book Buddy</a>-->
+<!--        <ul class="nav navbar-nav">-->
+
+<!--            <li><a href="/" style="color:white;" >Top Books</a></li>-->
+<!--			<li><a href="/authors" style="color:white;">Top Authors</a></li>-->
+<!--            <li><a href="/recommend" style="color:white;">Recommend</a></li>-->
+<!--			<li><a href="/category" style="color:white;">Category</a></li>-->
+<!--            <li><a style="color:white;">Contact</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+
+<!--		<br>-->
+
+<!--        <h1 style="align:center;margin-left:500px;color:white;"><b>Top 50 Books of all Times</b></h1>-->
+<!--					&lt;!&ndash; row &ndash;&gt;-->
+<!--<div class="col-md-10" style="align-center;margin-left:120px;-->
+<!--  justify-content: center;align-items:center;" >-->
+
+<!--            <div class="col-md-12" style="align-center;margin-right:20px;text-align:center;" >-->
+<!--						<table  border="1" style="text-align: center;border-collapse: separate;border-spacing: 1px;border-width:3px;border-color:#D071f9;background-color:white;" ><tr>-->
+<!--							<th width="2%" >Standings</th>-->
+<!--							<th width="15%">Image</th>-->
+<!--							<th width="15%">Title</th>-->
+<!--&lt;!&ndash;							<th width="45%">Description</th>&ndash;&gt;-->
+<!--							 <th width="10%">Author</th>-->
+<!--							<th width="1%">Liked Percentage</th>-->
+<!--                        </tr>-->
+<!--                             {% for i in range(book_name|length) %}-->
+
+<!--							<tr>-->
+<!--							<td>{{ i+1 }}</td>-->
+<!--							    <td><img src="{{ image[i] }} " style="width:190px; height:190px;border:2px solid black;border-radius:7px;align-items:center;margin-top:5px;margin-bottom:5px;" ></td>-->
+
+<!--								<td><b>{{ book_name[i] }}</b></td>-->
+<!--								<td>{{ author[i] }}</td>-->
+<!--								<td>{{ rating[i] }}%</td>-->
+
+
+<!--                          </tr>-->
+<!--                            {% endfor %}-->
+
+
+
+
+
+<!--						</table>-->
+<!--                </div>-->
+
+
+
+
+
+
+
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/s.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+     .blur-container{
+    width:100%;
+    height:1200vh;
+    backdrop-filter:blur(7px);
+    }
+    .text-white{
+        color:white
+    }
+</style>
+<body style="background-image:url('https://dg0lpj0xiisq5.cloudfront.net/assets/v1/authentication/background_books-cea9d1aee2ddd22a50736e54d6689f53a72589b55b8aa326ac3a32cada24535e.jpg');" class="blur-container">
+        <!-- Home -->
+		<nav class="navbar text-white sticky" style="background-color:#A020F0;height:30px;">
+        <a class="navbar-brand" style="color:white;">Book Buddy</a>
+        <ul class="nav navbar-nav">
+
+            <li><a href="/" style="color:white;" >Top Books</a></li>
+            <li><a href="/authors" style="color:white;">Top Authors</a></li>
+            <li><a href="/recommend" style="color:white;">Recommend</a></li>
+            <li><a href="/category" style="color:white;">Category</a></li>
+            <li><a style="color:white;">Contact</a></li>
+        </ul>
+    </nav>
+        <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="text-align:center;justify-content:center;align-items:center;color:white;"><b>Top 50 Books</b></h1>
+                <h5 style="text-align:center;justify-content:center;align-items:center;color:white;"><b>Top rated books with over 15000+ user ratings across all genres</b></h5>
+            </div>
+
+            {% for i in range(book_name|length) %}
+                <div class="col-md-3" style="margin-top:50px">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="card-img-top" src="{{ image[i] }}" style="width:190px;height:190px;border:2px solid black;border-radius:7px;align-items:center;margin-top:5px;margin-bottom:5px;">
+                            <h5 class="text-white"><b>{{ book_name[i] }}</b></h5>
+							<p class="text-white">Written by - {{ author[i] }}</p>
+
+							 <h5 class="text-white">Rating - {{ rating[i] }}%</h5>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</body>
+</html>

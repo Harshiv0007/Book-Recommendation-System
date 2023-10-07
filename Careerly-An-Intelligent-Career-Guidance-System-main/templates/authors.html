@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/s.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+     .blur-container{
+    width:100%;
+    height:250vh;
+    backdrop-filter:blur(7px);
+    }
+    .text-white{
+        color:white
+    }
+</style>
+<body style="background-image:url('https://dg0lpj0xiisq5.cloudfront.net/assets/v1/authentication/background_books-cea9d1aee2ddd22a50736e54d6689f53a72589b55b8aa326ac3a32cada24535e.jpg');" class="blur-container">
+        <!-- Home -->
+		<nav class="navbar text-white sticky" style="background-color:#A020F0;height:30px;">
+        <a class="navbar-brand" style="color:white;">Book Buddy</a>
+        <ul class="nav navbar-nav">
+
+            <li><a href="/" style="color:white;" >Top Books</a></li>
+            <li><a href="/authors" style="color:white;">Top Authors</a></li>
+            <li><a href="/recommend" style="color:white;">Recommend</a></li>
+            <li><a href="/category" style="color:white;">Category</a></li>
+            <li><a style="color:white;">Contact</a></li>
+        </ul>
+    </nav>
+        <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="text-align:center;justify-content:center;align-items:center;color:white;"><b>Top Authors</b></h1>
+                <h5 style="text-align:center;justify-content:center;align-items:center;color:white;"><b>Authors with highest user ratings who have written 15+ books </b></h5>
+
+            </div>
+
+            {% for i in range(author|length) %}
+                <div class="col-md-3" style="margin-top:50px">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="card-img-top" src="{{ coverImg[i] }}" style="width:190px;height:190px;border:2px solid black;border-radius:7px;align-items:center;margin-top:5px;margin-bottom:5px;">
+                            <p class="text-white">{{ author[i] }}</p>
+
+                            <h5 class="text-white">Books Published - {{ numBooks[i] }}</h5>
+                            <h5 class="text-white">Reader Rating - {{ likedPercent[i] }} %</h5>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</body>
+</html>
